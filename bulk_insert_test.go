@@ -11,7 +11,7 @@ import (
 type fakeRelationDB struct{}
 
 type fakeDB struct {
-	ID        int
+	ID        int `gorm:"AUTO_INCREMENT"`
 	Name      string
 	Email     string           `gorm:"default:default@mail.com"`
 	Relation  *fakeRelationDB  `gorm:"foreignkey:RelationID"`
